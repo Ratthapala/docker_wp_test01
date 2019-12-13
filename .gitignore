@@ -104,3 +104,12 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+
+/wordpress/*
+!/wordpress/favicon.ico
+!/wordpress/google*.html
+!/wordpress/wp-content
+/wordpress/wp-content/*
+!/wordpress/wp-content/themes
+/wordpress/wp-content/themes/*
+!/wordpress/wp-content/themes/mywebsite
