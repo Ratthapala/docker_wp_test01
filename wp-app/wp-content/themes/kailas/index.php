@@ -1,17 +1,14 @@
 <?php get_header(); ?>
-<div class="container">
-  <h1>This is index</h1>
-
-  <?php if(have_posts()): while(have_posts()): the_post(); ?>
-    <?php get_template_part('loop-content'); ?>
-  <?php endwhile; endif; ?><!--ループ終了-->
-  <div class="pagination">
-    <?php echo paginate_links( array(
-      'type' => 'list',
-      'mid_size' => '1',
-      'prev_text' => '<i class="fas fa-angle-left"></i>',
-      'next_text' => '<i class="fas fa-angle-right"></i>'
-    ) ); ?>
+<div class="l-container">
+  <div class="l-main">
+    <div class="l-articles">
+      <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        <?php get_template_part('loop-content'); ?>
+      <?php endwhile; endif; ?><!--ループ終了-->
+      <div class="pagination">
+        <?php if( function_exists("the_pagination") ) the_pagination(); ?>
+      </div>
+    </div>
   </div>
   <?php get_sidebar(); ?>
 </div>

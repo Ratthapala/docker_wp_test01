@@ -1,5 +1,5 @@
-<aside id="sidebar" class="sidebar">
-  <div class="sidebar-inner">
-    <h3>side</h3>
+<aside id="l-sidebar" class="l-sidebar">
+  <div class="l-sidebar__inner">
+    <?php dynamic_sidebar( 'side-widget' ); ?>
   </div><!--end sidebar-inner-->
 </aside>
